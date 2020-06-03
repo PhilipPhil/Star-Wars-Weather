@@ -1,23 +1,23 @@
 {
-    // Required
-    "app": {
-      "background": {
-        // Optional
-        "scripts": ["background.js"]
-      }
-    },
-    "manifest_version": 2,
-    "name": "My App",
-    "version": "versionString",
-  
-    // Recommended
-    "default_locale": "en",
-    "description": "A plain text description",
-    "icons": { "16": "icon16.png",
-        "48": "icon48.png",
-       "128": "icon128.png" },
-  
-    "externally_connectable": {
-        "matches": ["*://*.example.com/*"]
-      }
-  }
+  "manifest_version": 2,
+  "name": "Star Wars Weather",
+  "description": "Sets theme to start wars planet matching weather in your location",
+  "version": "1.0.0",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab"
+  ]
+}
