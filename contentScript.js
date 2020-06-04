@@ -1,8 +1,10 @@
 function setBackgroundImage(temp) {
     let file
     if (temp > 287) {
+        chrome.runtime.sendMessage('Hoth')
         file = 'img/hoth/1.jpg'
     } else {
+        chrome.runtime.sendMessage('Coruscant')
         file = 'img/coruscant/1.jpg'
     }
     let url = chrome.extension.getURL(file)
