@@ -11,13 +11,26 @@
   "browser_action": {
     "default_popup": "popup.html"
   },
+  "background": {
+    "js": "background.js"
+  },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["contentScript.js"]
+      "matches": [
+        "https://www.google.com/",
+        "https://www.google.ca/",
+        "https://www.google.com/webhp*",
+        "https://www.google.ca/webhp*"
+      ],
+      "js": [
+        "contentScript.js"
+      ]
     }
   ],
   "permissions": [
     "activeTab"
+  ],
+  "web_accessible_resources": [
+    "img/*"
   ]
 }
