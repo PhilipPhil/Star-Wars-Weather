@@ -1,21 +1,27 @@
-function setBackgroundImage(temp) {
+
+function setBackgroundImage(imgUrl) {
+    document.body.style.background = "url('" + imgUrl + "')"
+}
+
+function getImgUrl(temp) {
     let file
-    if (temp > 287) {
+    if (temp < 287) {
         chrome.runtime.sendMessage('Hoth')
-        file = 'img/hoth/1.jpg'
+        document.getElementById('planet').innerText = 'Hoth'
+        file = 'img/planet/hoth/1.jpg'
     } else {
         chrome.runtime.sendMessage('Coruscant')
-        file = 'img/coruscant/1.jpg'
+        document.getElementById('planet').innerText = 'Coruscant'
+        file = 'img/planet/coruscant/1.jpg'
     }
-    let url = chrome.extension.getURL(file)
-    document.body.style.background = "url('" + url + "')"
-    document.body.style.fontWeight = ['bold']
-
+    let imgUrl = chrome.extension.getURL(file)
+    return imgUrl
 }
 
 function createBackGround(data) {
     temp = data["main"]["temp"]
-    setBackgroundImage(temp)
+    imgUrl = getImgUrl(temp)
+    setBackgroundImage(imgUrl)
 }
 
 function showMap(position) {

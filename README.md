@@ -1,2 +1,6 @@
 # Star-Wars-Weather
-Star Wars weather Chrome extension. This chrome extension will take your current location and set your google homepage background to a Star Wars planet that matches your current weather.
+Star Wars weather Chrome extension. This chrome extension will take your current location and set your new tab to a Star Wars planet that matches your current weather.
+
+
+npm install bootstrap
+npm install jquery
