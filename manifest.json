@@ -13,7 +13,8 @@
   },
   "permissions": [
     "activeTab",
-    "geolocation"
+    "geolocation",
+    "bookmarks"
   ],
   "web_accessible_resources": [
     "img/*"
