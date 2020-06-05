@@ -5,7 +5,7 @@ function setBackgroundImage(imgUrl) {
 
 function getImgUrl(temp) {
     let file
-    if (temp < 287) {
+    if (temp < 295) {
         chrome.runtime.sendMessage('Hoth')
         document.getElementById('planet').innerText = 'Hoth'
         file = 'img/planet/hoth/1.jpg'
