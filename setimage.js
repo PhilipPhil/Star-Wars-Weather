@@ -1,11 +1,11 @@
 
 function setBackgroundImage(imgUrl) {
-    document.body.style.background = "url('" + imgUrl + "')"
+    document.body.style.backgroundImage = "url('" + imgUrl + "')"
 }
 
 function getImgUrl(temp) {
     let file
-    if (temp < 295) {
+    if (temp < 285) {
         chrome.runtime.sendMessage('Hoth')
         document.getElementById('planet').innerText = 'Hoth'
         file = 'img/planet/hoth/1.jpg'
