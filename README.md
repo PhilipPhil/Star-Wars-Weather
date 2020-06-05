@@ -4,3 +4,5 @@ Star Wars weather Chrome extension. This chrome extension will take your current
 
 npm install bootstrap
 npm install jquery
+npm install font-awesome
+npm install bootstrap-social
