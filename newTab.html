@@ -20,7 +20,8 @@
                     <a class="nav-link" href="https://mail.google.com/mail/"><i class="fa fa-envelope"></i> Gmail</a>
                     <a class="nav-link" href="https://www.google.ca/imghp?hl=en&tab=ri&authuser=0&ogbl"><i
                             class="fa fa-image"></i> Images</a>
-                    <a class="nav-link" href="chrome://apps/"><i class="fa fa-th fa-lg"></i> Apps</a>
+                    <a id="goToApps" class="nav-link" href="#" onclick="goToApps()"><i
+                            class="fa fa-th fa-lg"></i> Apps</a>
                 </nav>
             </div>
         </header>
@@ -36,7 +37,7 @@
                     <form method="GET" action="https://www.google.com/search">
                         <div class="form-group">
                             <input type="text" name="q" class="form-control" id="googlesearch"
-                                aria-describedby="googlesearch" placeholder="Search Google or type a URL">
+                                aria-describedby="googlesearch" placeholder="Search Google...">
                             <input type="submit" style="visibility: hidden" />
                         </div>
                     </form>

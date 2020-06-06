@@ -33,3 +33,7 @@ function getImgUrl(temp) {
 function setBackgroundImage(imgUrl) {
     document.body.style.backgroundImage = "url('" + imgUrl + "')"
 }
+
+document.getElementById('goToApps').addEventListener('click', function(e) {
+    chrome.tabs.create({"url":"chrome://apps"})
+})
