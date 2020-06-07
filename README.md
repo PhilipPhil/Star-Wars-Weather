@@ -3,6 +3,7 @@ Star Wars weather Chrome extension. This chrome extension will take your current
 
 - npm install bootstrap
 - npm install jquery
+- npm install popper.js
 - npm install font-awesome
 - npm install bootstrap-social
 - npm install psl
