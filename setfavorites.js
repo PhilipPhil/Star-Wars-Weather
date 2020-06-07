@@ -20,13 +20,10 @@ function setNewHtml(url, index) {
   console.log(parsed.domain); // 'google.com'
   console.log(parsed.subdomain); // null
 
-  if(parsed.subdomain != 'www') {
-    websitename = parsed.subdomain
-    websitedomain = parsed.domain
-  } else{
-    websitename = parsed.sld
-    websitedomain = parsed.domain
-  }
+
+  websitename = parsed.sld
+  websitedomain = parsed.domain
+
 
 
 
