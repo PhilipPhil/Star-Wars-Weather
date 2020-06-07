@@ -10,14 +10,15 @@ function showMap(position) {
 }
 
 function createBackGround(data) {
-    temp = data["main"]["temp"]
-    imgUrl = getImgUrl(temp)
+    kelvin = data["main"]["temp"]
+    imgUrl = getImgUrl(kelvin)
     setBackgroundImage(imgUrl)
 }
 
-function getImgUrl(temp) {
+function getImgUrl(kelvin) {
     let file
-    if (temp < 296) {
+    temp = kelvin - 273.15
+    if (temp < 20) {
         chrome.runtime.sendMessage('Hoth')
         document.getElementById('planet').innerText = 'Hoth'
         file = 'img/planet/hoth/1.jpg'
@@ -33,7 +34,3 @@ function getImgUrl(temp) {
 function setBackgroundImage(imgUrl) {
     document.body.style.backgroundImage = "url('" + imgUrl + "')"
 }
-
-document.getElementById('goToApps').addEventListener('click', function(e) {
-    chrome.tabs.create({"url":"chrome://apps"})
-})

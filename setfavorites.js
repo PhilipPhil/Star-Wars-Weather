@@ -1,34 +1,42 @@
 index = 1
-
-chrome.bookmarks.getTree(function(itemTree){
-  itemTree.forEach(function(item){
-    if( index > 12) {
-      return
-    }
-      processNode(item);
+document.addEventListener('DOMContentLoaded', function () {
+  chrome.topSites.get(function (urls) {
+    urls.forEach(function ({ url }) {
+      setNewHtml(url, index)
+      index++
+    })
   });
 });
 
-function processNode(node) {
 
-  if(node.children) {
-      node.children.forEach(function(child) { processNode(child); });
+function setNewHtml(url, index) {
+  i = url.indexOf('/', 1 + url.indexOf('/', 1 + url.indexOf('/')));
+  websitedomain = url.substring(0, i);
+  websitedomain = websitedomain.split('://')[1]
+
+  var parsed = psl.parse(websitedomain);
+  console.log(parsed.tld); // 'com'
+  console.log(parsed.sld); // 'google'
+  console.log(parsed.domain); // 'google.com'
+  console.log(parsed.subdomain); // null
+
+  if(parsed.subdomain != 'www') {
+    websitename = parsed.subdomain
+    websitedomain = parsed.domain
+  } else{
+    websitename = parsed.sld
+    websitedomain = parsed.domain
   }
 
-  if(node.url) { 
-    setNewHtml(node.url, index);
-    index++ 
-  }
+
+
+  // alert(websitename)
+
+
+  newhtml = "<a href='" + url + "'>" +
+    // "<img style='border-radius: 50%; width: 50px; height: auto;' src='https://s2.googleusercontent.com/s2/favicons?domain="+websiteUrl+"'></a>" +
+    // "<img style='border-radius: 50%; width: 50px; height: auto;' src='http://logo.clearbit.com/spotify.com'></a>" +
+    "<img style='border-radius: 50%; width: 50px; height: auto;' src='https://logo.clearbit.com/" + websitedomain + "/'></a>" +
+    "<p>" + websitename + "</p>"
+  document.getElementById('fav' + index).innerHTML = newhtml
 }
-
-function setNewHtml(websiteUrl, index) {
-  websitename = 'Website Name'
-  newhtml = "<a class='nav-link' href='" + websiteUrl + "'>" +
-    "<img class='rounded' src='https://s2.googleusercontent.com/s2/favicons?domain=" + websiteUrl + "'" +
-    " alt='Link'" +
-    '<p class="text-center">'+websitename+'</p>' +
-    "</a>"
-  document.getElementById('fav'+index).innerHTML = newhtml
-}
-
-

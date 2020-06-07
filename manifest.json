@@ -14,7 +14,7 @@
   "permissions": [
     "activeTab",
     "geolocation",
-    "bookmarks"
+    "topSites"
   ],
   "web_accessible_resources": [
     "img/*"

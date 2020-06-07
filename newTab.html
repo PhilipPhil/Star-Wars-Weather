@@ -7,7 +7,7 @@
     <title>New Tab</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/cover.css">
-
+    <link href="https://allfont.net/allfont.css?fonts=star-jedi" rel="stylesheet" type="text/css" />
 </head>
 
 <body class="text-center">
@@ -20,8 +20,8 @@
                     <a class="nav-link" href="https://mail.google.com/mail/"><i class="fa fa-envelope"></i> Gmail</a>
                     <a class="nav-link" href="https://www.google.ca/imghp?hl=en&tab=ri&authuser=0&ogbl"><i
                             class="fa fa-image"></i> Images</a>
-                    <a id="goToApps" class="nav-link" href="#" onclick="goToApps()"><i
-                            class="fa fa-th fa-lg"></i> Apps</a>
+                    <a id="goToApps" class="nav-link" href="#"><i class="fa fa-th"></i> Apps</a>
+                    <a id="goToDefault" class="nav-link" href="#"><i class="fa fa-home"></i> Default</a>
                 </nav>
             </div>
         </header>
@@ -29,7 +29,7 @@
         <main role="main" class="inner cover">
             <div class="row mb-4">
                 <div class="col">
-                    <h1 class="cover-heading" style="font-size: 500%;">Google</h1>
+                    <h1 class="cover-heading" style="font-size: 540%;">Google</h1>
                 </div>
             </div>
             <div class="row">
@@ -77,7 +77,7 @@
                 <div id="fav11" class="col-4 col-md-3 col-lg-2 mb-4">
                     <i class="fa fa-plus-circle fa-2x"></i>
                 </div>
-                <div id="fav12" class="col-4 col-md-3 col-lg-2 mb-4">
+                <div id="fav12" class="col-4 col-md-3 col-lg-2 mb-4 text-center">
                     <i class="fa fa-plus-circle fa-2x"></i>
                 </div>
             </div>
@@ -93,10 +93,14 @@
 </body>
 
 <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+<!-- <script src="node_modules/popper/dist/umd/popper.min.js"></script> -->
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="node_modules/psl/dist/psl.min.js"></script>
+
 <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
 <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+
+<script src="goto.js"></script>
 <script src="setimage.js"></script>
 <script src="setfavorites.js"></script>
 

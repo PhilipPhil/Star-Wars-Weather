@@ -6,3 +6,4 @@ npm install bootstrap
 npm install jquery
 npm install font-awesome
 npm install bootstrap-social
+npm install psl
