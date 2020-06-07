@@ -12,56 +12,6 @@
 
 <body class="text-center">
 
-    <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Add shortcut</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">Name</label>
-                            <input type="text" class="form-control" id="recipient-name">
-                        </div>
-                        <div class="form-group">
-                            <label for="message-text" class="col-form-label">URL</label>
-                            <input type="text" class="form-control" id="recipient-name">
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-primary">Add</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="removeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Remove shortcut</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                    <button id='removefav' type="button" class="btn btn-primary">Remove</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-
     <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
         <header class="masthead mb-auto">
             <div class="inner">
@@ -94,12 +44,7 @@
                 </div>
             </div>
             <div class="row">
-                <div id="fav1" class="col-4 col-md-3 col-lg-2 mb-2 notused" style='text-decoration: none;' data-whatever="1">
-                    <div class="row">
-                        <button disabled type="button" class="close" aria-label="Close">
-                            <span aria-hidden="true">&nbsp;&nbsp;</span>
-                        </button>
-                    </div>
+                <div id="fav1" class="col-3 mb-2" style='text-decoration: none;' data-whatever="1">
                     <a href='#' style='text-decoration: none;'>
                         <div class='favorite'>
                             <i style='border-radius: 50%; width: 50px; height: 50px;'
@@ -108,12 +53,7 @@
                         </div>
                     </a>
                 </div>
-                <div id="fav2" class="col-4 col-md-3 col-lg-2 mb-2 notused" style='text-decoration: none;'>
-                    <div class="row">
-                        <button disabled type="button" class="close" aria-label="Close">
-                            <span aria-hidden="true">&nbsp;&nbsp;</span>
-                        </button>
-                    </div>
+                <div id="fav2" class="col-3 mb-2" style='text-decoration: none;'>
                     <a href='#' style='text-decoration: none;'>
                         <div class='favorite'>
                             <i style='border-radius: 50%; width: 50px; height: 50px;'
@@ -122,12 +62,7 @@
                         </div>
                     </a>
                 </div>
-                <div id="fav3" class="col-4 col-md-3 col-lg-2 mb-2 notused" style='text-decoration: none;'>
-                    <div class="row">
-                        <button disabled type="button" class="close" aria-label="Close">
-                            <span aria-hidden="true">&nbsp;&nbsp;</span>
-                        </button>
-                    </div>
+                <div id="fav3" class="col-3 mb-2" style='text-decoration: none;'>
                     <a href='#' style='text-decoration: none;'>
                         <div class='favorite'>
                             <i style='border-radius: 50%; width: 50px; height: 50px;'
@@ -136,12 +71,7 @@
                         </div>
                     </a>
                 </div>
-                <div id="fav4" class="col-4 col-md-3 col-lg-2 mb-2 notused" style='text-decoration: none;'>
-                    <div class="row">
-                        <button disabled type="button" class="close" aria-label="Close">
-                            <span aria-hidden="true">&nbsp;&nbsp;</span>
-                        </button>
-                    </div>
+                <div id="fav4" class="col-3 mb-2" style='text-decoration: none;'>
                     <a href='#' style='text-decoration: none;'>
                         <div class='favorite'>
                             <i style='border-radius: 50%; width: 50px; height: 50px;'
@@ -150,12 +80,7 @@
                         </div>
                     </a>
                 </div>
-                <div id="fav5" class="col-4 col-md-3 col-lg-2 mb-2 notused" style='text-decoration: none;'>
-                    <div class="row">
-                        <button disabled type="button" class="close" aria-label="Close">
-                            <span aria-hidden="true">&nbsp;&nbsp;</span>
-                        </button>
-                    </div>
+                <div id="fav5" class="col-3 mb-2" style='text-decoration: none;'>
                     <a href='#' style='text-decoration: none;'>
                         <div class='favorite'>
                             <i style='border-radius: 50%; width: 50px; height: 50px;'
@@ -164,12 +89,7 @@
                         </div>
                     </a>
                 </div>
-                <div id="fav6" class="col-4 col-md-3 col-lg-2 mb-2 notused" style='text-decoration: none;'>
-                    <div class="row">
-                        <button disabled type="button" class="close" aria-label="Close">
-                            <span aria-hidden="true">&nbsp;&nbsp;</span>
-                        </button>
-                    </div>
+                <div id="fav6" class="col-3 mb-2" style='text-decoration: none;'>
                     <a href='#' style='text-decoration: none;'>
                         <div class='favorite'>
                             <i style='border-radius: 50%; width: 50px; height: 50px;'
@@ -178,12 +98,7 @@
                         </div>
                     </a>
                 </div>
-                <div id="fav7" class="col-4 col-md-3 col-lg-2 mb-2 notused" style='text-decoration: none;'>
-                    <div class="row">
-                        <button disabled type="button" class="close" aria-label="Close">
-                            <span aria-hidden="true">&nbsp;&nbsp;</span>
-                        </button>
-                    </div>
+                <div id="fav7" class="col-3 mb-2" style='text-decoration: none;'>
                     <a href='#' style='text-decoration: none;'>
                         <div class='favorite'>
                             <i style='border-radius: 50%; width: 50px; height: 50px;'
@@ -192,68 +107,7 @@
                         </div>
                     </a>
                 </div>
-                <div id="fav8" class="col-4 col-md-3 col-lg-2 mb-2 notused" style='text-decoration: none;'>
-                    <div class="row">
-                        <button disabled type="button" class="close" aria-label="Close">
-                            <span aria-hidden="true">&nbsp;&nbsp;</span>
-                        </button>
-                    </div>
-                    <a href='#' style='text-decoration: none;'>
-                        <div class='favorite'>
-                            <i style='border-radius: 50%; width: 50px; height: 50px;'
-                                class="fa fa-plus-circle fa-2x"></i>
-                            <p style='word-wrap: break-word;'>Add</p>
-                        </div>
-                    </a>
-                </div>
-                <div id="fav9" class="col-4 col-md-3 col-lg-2 mb-2 notused" style='text-decoration: none;'>
-                    <div class="row">
-                        <button disabled type="button" class="close" aria-label="Close">
-                            <span aria-hidden="true">&nbsp;&nbsp;</span>
-                        </button>
-                    </div>
-                    <a href='#' style='text-decoration: none;'>
-                        <div class='favorite'>
-                            <i style='border-radius: 50%; width: 50px; height: 50px;'
-                                class="fa fa-plus-circle fa-2x"></i>
-                            <p style='word-wrap: break-word;'>Add</p>
-                        </div>
-                    </a>
-                </div>
-                <div id="fav10" class="col-4 col-md-3 col-lg-2 mb-2 notused" style='text-decoration: none;'>
-                    <div class="row">
-                        <button disabled type="button" class="close" aria-label="Close">
-                            <span aria-hidden="true">&nbsp;&nbsp;</span>
-                        </button>
-                    </div>
-                    <a href='#' style='text-decoration: none;'>
-                        <div class='favorite'>
-                            <i style='border-radius: 50%; width: 50px; height: 50px;'
-                                class="fa fa-plus-circle fa-2x"></i>
-                            <p style='word-wrap: break-word;'>Add</p>
-                        </div>
-                    </a>
-                </div>
-                <div id="fav11" class="col-4 col-md-3 col-lg-2 mb-2 notused" style='text-decoration: none;'>
-                    <div class="row">
-                        <button disabled type="button" class="close" aria-label="Close">
-                            <span aria-hidden="true">&nbsp;&nbsp;</span>
-                        </button>
-                    </div>
-                    <a href='#' style='text-decoration: none;'>
-                        <div class='favorite'>
-                            <i style='border-radius: 50%; width: 50px; height: 50px;'
-                                class="fa fa-plus-circle fa-2x"></i>
-                            <p style='word-wrap: break-word;'>Add</p>
-                        </div>
-                    </a>
-                </div>
-                <div id="fav12" class="col-4 col-md-3 col-lg-2 mb-2 notused" style='text-decoration: none;' data-whatever="12">
-                    <div class="row">
-                        <button disabled type="button" class="close" aria-label="Close">
-                            <span aria-hidden="true">&nbsp;&nbsp;</span>
-                        </button>
-                    </div>
+                <div id="fav8" class="col-3 mb-2" style='text-decoration: none;'>
                     <a href='#' style='text-decoration: none;'>
                         <div class='favorite'>
                             <i style='border-radius: 50%; width: 50px; height: 50px;'
@@ -285,6 +139,5 @@
 <script src="goto.js"></script>
 <script src="setimage.js"></script>
 <script src="setfavorites.js"></script>
-<script src="editfavorites.js"></script>
 
 </html>
