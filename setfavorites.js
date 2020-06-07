@@ -3,12 +3,14 @@ index = 1
 document.addEventListener('DOMContentLoaded', function () {
   chrome.topSites.get(function (urls) {
     urls.forEach(function ({ url }) {
-      setNewHtml(url, index)
-      index++
+      if( index <= 8){
+        setNewHtml(url, index)
+        index++
+      }
+
     })
   });
 });
-
 
 function setNewHtml(url, index) {
   i = url.indexOf('/', 1 + url.indexOf('/', 1 + url.indexOf('/')));
