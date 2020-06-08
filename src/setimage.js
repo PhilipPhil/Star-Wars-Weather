@@ -56,7 +56,7 @@ function getImgUrl(info) {
             f = Math.floor(Math.random() * 2) + 1
             file = 'img/planet/naboo/night/' + f + '.jpg'
         }
-    } else if (info.cel > 10) {
+    } else if (info.cel > 9) {
         document.getElementById('planet').innerText = 'Coruscant'
         if (info.currentTime < info.sunset && info.currentTime > info.sunrise) {
             f = Math.floor(Math.random() * 4) + 1
