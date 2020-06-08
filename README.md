@@ -26,7 +26,7 @@ Api’s:
 
 ## Sample Images
 
-### Night Time with Mild climate
+### Other Examples
 ![Image1](img/AppExample/sample1.JPG)
 
 ### Night Time with Mild climate
