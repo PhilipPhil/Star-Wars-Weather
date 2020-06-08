@@ -12,14 +12,9 @@ function showMap(position) {
 
 function createBackGround(data) {
     cel = Math.round(data["main"]["temp"] - 273.15)
-    far = Math.round((data["main"]["temp"] - 273.15) * 9 / 5 + 32)
-    sunrise = data["sys"]["sunrise"] * 1000;
-    sunset = data["sys"]["sunset"] * 1000;
-    city = data["name"]
-    description = data["weather"][0]['description']
     date = new Date();
     currentTime = date.getTime();
-    imgUrl = getImgUrl({ "cel": cel, "far": far, "sunrise": sunrise, "sunset": sunset, "currentTime": currentTime, "city": city, "description": description })
+    imgUrl = getImgUrl({ "cel": cel, "currentTime": currentTime })
     setBackgroundImage(imgUrl)
 }
 
