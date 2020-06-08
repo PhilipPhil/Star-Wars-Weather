@@ -1,7 +1,7 @@
-function getDateString(unixTime){
+function getDateString(unixTime) {
     date = new Date(unixTime);
     hours = date.getHours();
-    if(hours > 12){
+    if (hours > 12) {
         hours = hours - 12
         minutes = "0" + date.getMinutes();
         unixTime = hours + ':' + minutes.substr(-2) + "pm";
@@ -12,7 +12,7 @@ function getDateString(unixTime){
 }
 
 chrome.runtime.onMessage.addListener(
-    function(request, sender, sendResponse){
+    function (request, sender, sendResponse) {
         localStorage["data"] = JSON.stringify(request.data)
     }
 );
@@ -26,7 +26,7 @@ document.getElementById('city').innerText = data.city;
 
 description = data.description
 description = description.charAt(0).toUpperCase() + description.slice(1)
-document.getElementById('description').innerText =  description;
+document.getElementById('description').innerText = description;
 
 document.getElementById('cel').innerText = data.cel + "°C"
 document.getElementById('far').innerText = data.far + "°F"

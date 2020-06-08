@@ -19,11 +19,13 @@
   "web_accessible_resources": [
     "img/*"
   ],
-  "chrome_url_overrides" : {
+  "chrome_url_overrides": {
     "newtab": "newTab.html"
   },
   "background": {
     "persistent": false,
-    "scripts": ["src/background.js"]
+    "scripts": [
+      "src/background.js"
+    ]
   }
 }
