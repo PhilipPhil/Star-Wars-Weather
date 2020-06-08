@@ -88,7 +88,7 @@ function getImgUrl(info) {
         info['planet'] = "Naboo"
         info['iconpath'] = 'img/planet/planetIcons/naboo.png'
         if (info.currentTime < info.sunset && info.currentTime > info.sunrise) {
-            chrome.runtime.sendMessage({greeting: "naboo", data: info})
+            chrome.runtime.sendMessage({greeting: "Naboo", data: info})
             document.getElementById('planet').innerText = 'Naboo'
             f = Math.floor(Math.random() * 2) + 1
             file = 'img/planet/naboo/day/' + f + '.jpg'
@@ -99,33 +99,37 @@ function getImgUrl(info) {
         }
 
     } else if (info.cel > 10) {
-
+        info['planet'] = "Coruscant"
+        info['iconpath'] = 'img/planet/planetIcons/coruscant.png'
         if (info.currentTime < info.sunset && info.currentTime > info.sunrise) {
-            chrome.runtime.sendMessage('Coruscant')
+            chrome.runtime.sendMessage({greeting: "Coruscant", data: info})
             document.getElementById('planet').innerText = 'Coruscant'
             f = Math.floor(Math.random() * 6) + 1
             file = 'img/planet/coruscant/day/' + f + '.jpg'
         } else {
-            chrome.runtime.sendMessage('Coruscant')
+            chrome.runtime.sendMessage({greeting: "Coruscant", data: info})
             document.getElementById('planet').innerText = 'Coruscant'
             f = Math.floor(Math.random() * 5) + 1
             file = 'img/planet/coruscant/night/' + f + '.jpg'
         }
     } else if (info.cel > 0) {
-
+        info['planet'] = "Endor"
+        info['iconpath'] = 'img/planet/planetIcons/endor.png'
         if (info.currentTime < info.sunset && info.currentTime > info.sunrise) {
-            chrome.runtime.sendMessage('Endor')
+            chrome.runtime.sendMessage({greeting: "Endor", data: info})
             document.getElementById('planet').innerText = 'Endor'
             f = Math.floor(Math.random() * 5) + 1
             file = 'img/planet/endor/day/' + f + '.jpg'
         } else {
-            chrome.runtime.sendMessage('Coruscant')
+            chrome.runtime.sendMessage({greeting: "Endor", data: info})
             document.getElementById('planet').innerText = 'Coruscant'
             f = Math.floor(Math.random() * 3) + 1
             file = 'img/planet/endor/night/' + f + '.jpg'
         }
     } else {
-        chrome.runtime.sendMessage('Space')
+        info['planet'] = "Space"
+        info['iconpath'] = 'img/planet/planetIcons/stars.jpg'
+        chrome.runtime.sendMessage({greeting: "Space", data: info})
         document.getElementById('planet').innerText = 'Space'
         f = Math.floor(Math.random() * 3) + 1
         file = 'img/planet/night/' + f + '.jpg'
