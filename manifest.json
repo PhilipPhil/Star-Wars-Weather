@@ -25,7 +25,8 @@
   "background": {
     "persistent": false,
     "scripts": [
-      "src/background.js"
+      "src/background.js",
+      "src/updateWeather.js"
     ]
   }
 }
