@@ -21,69 +21,68 @@ function createBackGround(data) {
 
 function getImgUrl(info) {
     let file
-    if (info.cel < 0) {
-        document.getElementById('planet').innerText = 'Hoth'
-        f = Math.floor(Math.random() * 10) + 1
-        file = 'img/planet/hoth/' + f + '.jpg'
-    } else if (info.cel > 34) {
+    if (info.cel > 34) {
         document.getElementById('planet').innerText = 'Mustafar'
-        file = 'img/planet/mustafar/1.jpg'
+        f = Math.floor(Math.random() * 3) + 1
+        file = 'img/planet/mustafar/' + f + '.jpg'
     } else if (info.cel > 31) {
         document.getElementById('planet').innerText = 'Jakku'
         if (info.currentTime < info.sunset && info.currentTime > info.sunrise) {
-            f = Math.floor(Math.random() * 3) + 1
+            f = Math.floor(Math.random() * 9) + 1
             file = 'img/planet/jakku/day/' + f + '.jpg'
         } else {
-            file = 'img/planet/jakku/night/1.jpg'
+            f = Math.floor(Math.random() * 2) + 1
+            file = 'img/planet/jakku/night/' + f + '.jpg'
         }
-    } else if (info.cel > 26) {
+    } else if (info.cel > 25) {
         document.getElementById('planet').innerText = 'Tatooine'
         if (info.currentTime < info.sunset && info.currentTime > info.sunrise) {
-            f = Math.floor(Math.random() * 6) + 1
+            f = Math.floor(Math.random() * 12) + 1
             file = 'img/planet/tatooine/day/' + f + '.jpg'
         } else {
-            f = Math.floor(Math.random() * 3) + 1
+            f = Math.floor(Math.random() * 6) + 1
             file = 'img/planet/tatooine/night/' + f + '.jpg'
         }
-    } else if (info.cel == 0) {
-        document.getElementById('planet').innerText = 'Dagobah'
-        file = 'img/planet/dagobah/1.jpg'
     } else if (info.cel > 19) {
         document.getElementById('planet').innerText = 'Bespin'
-        f = Math.floor(Math.random() * 5) + 1
+        f = Math.floor(Math.random() * 9) + 1
         file = 'img/planet/bespin/' + f + '.jpg'
-    } else if (info.cel > 17) {
+    } else if (info.cel > 16) {
         document.getElementById('planet').innerText = 'Naboo'
         if (info.currentTime < info.sunset && info.currentTime > info.sunrise) {
-            f = Math.floor(Math.random() * 2) + 1
+            f = Math.floor(Math.random() * 3) + 1
             file = 'img/planet/naboo/day/' + f + '.jpg'
         } else {
-            file = 'img/planet/naboo/night/1.jpg'
+            f = Math.floor(Math.random() * 2) + 1
+            file = 'img/planet/naboo/night/' + f + '.jpg'
         }
     } else if (info.cel > 10) {
         document.getElementById('planet').innerText = 'Coruscant'
         if (info.currentTime < info.sunset && info.currentTime > info.sunrise) {
-            f = Math.floor(Math.random() * 6) + 1
+            f = Math.floor(Math.random() * 4) + 1
             file = 'img/planet/coruscant/day/' + f + '.jpg'
         } else {
             f = Math.floor(Math.random() * 5) + 1
             file = 'img/planet/coruscant/night/' + f + '.jpg'
         }
-    } else if (info.cel > 0) {
+    } else if (info.cel > 3) {
         document.getElementById('planet').innerText = 'Endor'
         if (info.currentTime < info.sunset && info.currentTime > info.sunrise) {
-            f = Math.floor(Math.random() * 5) + 1
+            f = Math.floor(Math.random() * 7) + 1
             file = 'img/planet/endor/day/' + f + '.jpg'
         } else {
-            f = Math.floor(Math.random() * 3) + 1
+            f = Math.floor(Math.random() * 5) + 1
             file = 'img/planet/endor/night/' + f + '.jpg'
         }
+    } else if (info.cel > -1) {
+        document.getElementById('planet').innerText = 'Dagobah'
+        f = Math.floor(Math.random() * 6) + 1
+        file = 'img/planet/dagobah/' + f + '.jpg'
     } else {
-        document.getElementById('planet').innerText = 'Space'
-        f = Math.floor(Math.random() * 3) + 1
-        file = 'img/planet/night/' + f + '.jpg'
+        document.getElementById('planet').innerText = 'Hoth'
+        f = Math.floor(Math.random() * 12) + 1
+        file = 'img/planet/hoth/' + f + '.jpg'
     }
-
     return file
 }
 

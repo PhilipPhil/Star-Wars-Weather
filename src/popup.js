@@ -37,46 +37,33 @@ function getData(data) {
     document.getElementById('sunrise').innerText = sunrise
     document.getElementById('sunset').innerText = sunset
     document.getElementById('city').innerText = city;
-
-    if (celsius < 0) {
-        document.getElementById('planet').innerText = "Hoth"
-        document.getElementById('planetimg').src = 'img/planet/planetIcons/hoth.png'
-    } else if (celsius > 34) {
+    if (celsius > 34) {
         document.getElementById('planet').innerText = "Mustafar"
-        document.getElementById('planetimg').src = 'img/planet/planetIcons/mustafar.png'
+        document.getElementById('planetimg').src = 'img/planet/icons/mustafar.png'
     } else if (celsius > 31) {
         document.getElementById('planet').innerText = "Jakku"
-        document.getElementById('planetimg').src = 'img/planet/planetIcons/jakku.png'
-
-
-    } else if (celsius > 26) {
+        document.getElementById('planetimg').src = 'img/planet/icons/jakku.png'
+    } else if (celsius > 25) {
         document.getElementById('planet').innerText = "Tatooine"
-        document.getElementById('planetimg').src = 'img/planet/planetIcons/tatooine.png'
-
-    } else if (celsius == 0) {
-        document.getElementById('planet').innerText = "Dagobah"
-        document.getElementById('planetimg').src = 'img/planet/planetIcons/dagobah.png'
-
-
+        document.getElementById('planetimg').src = 'img/planet/icons/tatooine.png'
     } else if (celsius > 19) {
         document.getElementById('planet').innerText = "Bespin"
-        document.getElementById('planetimg').src = 'img/planet/planetIcons/bespin.png'
-
-    } else if (celsius > 17) {
+        document.getElementById('planetimg').src = 'img/planet/icons/bespin.png'
+    } else if (celsius > 16) {
         document.getElementById('planet').innerText = "Naboo"
-        document.getElementById('planetimg').src = 'img/planet/planetIcons/naboo.png'
-
+        document.getElementById('planetimg').src = 'img/planet/icons/naboo.png'
     } else if (celsius > 10) {
         document.getElementById('planet').innerText = "Coruscant"
-        document.getElementById('planetimg').src = 'img/planet/planetIcons/coruscant.png'
-
-    } else if (celsius > 0) {
+        document.getElementById('planetimg').src = 'img/planet/icons/coruscant.png'
+    } else if (celsius > 3) {
         document.getElementById('planet').innerText = "Endor"
-        document.getElementById('planetimg').src = 'img/planet/planetIcons/endor.png'
-
+        document.getElementById('planetimg').src = 'img/planet/icons/endor.png'
+    } else if (celsius > -1) {
+        document.getElementById('planet').innerText = "Dagobah"
+        document.getElementById('planetimg').src = 'img/planet/icons/dagobah.png'
     } else {
-        document.getElementById('planet').innerText = "Space"
-        document.getElementById('planetimg').src = 'img/planet/planetIcons/stars.jpg'
+        document.getElementById('planet').innerText = "Hoth"
+        document.getElementById('planetimg').src = 'img/planet/icons/hoth.png'
     }
 
 }
