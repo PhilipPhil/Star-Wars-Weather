@@ -7,7 +7,6 @@
     <title>New Tab</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/cover.css">
-    <link href="https://allfont.net/allfont.css?fonts=star-jedi" rel="stylesheet" type="text/css" />
 </head>
 
 <body class="text-center">
@@ -15,7 +14,8 @@
     <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
         <header class="masthead mb-auto">
             <div class="inner">
-                <h3 class="masthead-brand" id='planet' style="cursor: context-menu">Planet</h3>
+                <h3 class="masthead-brand" id='planet' style="cursor: context-menu" data-toggle="tooltip"
+                    title="The current weather in your location matches this Star Wars planet!">Planet</h3>
                 <nav class="nav nav-masthead justify-content-center">
                     <a class="nav-link" href="https://mail.google.com/mail/"><i class="fa fa-envelope"></i> Gmail</a>
                     <a class="nav-link" href="https://www.google.ca/imghp?hl=en&tab=ri&authuser=0&ogbl"><i
@@ -139,5 +139,6 @@
 <script src="goto.js"></script>
 <script src="setimage.js"></script>
 <script src="setfavorites.js"></script>
+<script src="tooltip.js"></script>
 
 </html>

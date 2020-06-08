@@ -16,80 +16,89 @@ function createBackGround(data) {
     sunrise = data["sys"]["sunrise"] * 1000;
     sunset = data["sys"]["sunset"] * 1000;
     city = data["name"]
+    description = data["weather"][0]['description']
     date = new Date();
     currentTime = date.getTime();
-    imgUrl = getImgUrl({ "cel": cel, "far": far, "sunrise": sunrise, "sunset": sunset, "currentTime": currentTime, "city": city })
+    imgUrl = getImgUrl({ "cel": cel, "far": far, "sunrise": sunrise, "sunset": sunset, "currentTime": currentTime, "city": city, "description": description })
     setBackgroundImage(imgUrl)
 }
 
 function getImgUrl(info) {
     let file
     if (info.cel < 0) {
-        chrome.runtime.sendMessage('Hoth')
+        info['planet'] = "Hoth"
+        info['iconpath'] = 'img/planet/planetIcons/hoth.png'
+        chrome.runtime.sendMessage({greeting: 'hoth', data: info})
         document.getElementById('planet').innerText = 'Hoth'
         f = Math.floor(Math.random() * 10) + 1
         file = 'img/planet/hoth/' + f + '.jpg'
 
     } else if (info.cel > 34) {
-
-        chrome.runtime.sendMessage('Mustafar')
+        info['planet'] = "Mustafar"
+        info['iconpath'] = 'img/planet/planetIcons/mustafar.png'
+        chrome.runtime.sendMessage({greeting: 'Mustafar', data: info})
         document.getElementById('planet').innerText = 'Mustafar'
         file = 'img/planet/mustafar/1.jpg'
 
     } else if (info.cel > 31) {
-
+        info['planet'] = "Jakku"
+        info['iconpath'] = 'img/planet/planetIcons/jakku.png'
         if (info.currentTime < info.sunset && info.currentTime > info.sunrise) {
-            chrome.runtime.sendMessage('Jakku')
+            chrome.runtime.sendMessage({greeting: 'Jakku', data: info})
             document.getElementById('planet').innerText = 'Jakku'
             f = Math.floor(Math.random() * 3) + 1
             file = 'img/planet/jakku/day/' + f + '.jpg'
         } else {
-            chrome.runtime.sendMessage('Jakku')
+            chrome.runtime.sendMessage({greeting: 'Jakku', data: info})
             document.getElementById('planet').innerText = 'Jakku'
             file = 'img/planet/jakku/night/1.jpg'
         }
 
     } else if (info.cel > 26) {
-
+        info['planet'] = "Tatooine"
+        info['iconpath'] = 'img/planet/planetIcons/tatooine.png'
         if (info.currentTime < info.sunset && info.currentTime > info.sunrise) {
-            chrome.runtime.sendMessage('Tatooine')
+            chrome.runtime.sendMessage({greeting: 'Tatooine', data: info})
             document.getElementById('planet').innerText = 'Tatooine'
             f = Math.floor(Math.random() * 6) + 1
             file = 'img/planet/tatooine/day/' + f + '.jpg'
         } else {
             chrome.runtime.sendMessage('Tatooine')
-            document.getElementById('planet').innerText = 'Tatooine'
+            chrome.runtime.sendMessage({greeting: 'Tatooine', data: info})
             f = Math.floor(Math.random() * 3) + 1
             file = 'img/planet/tatooine/night/' + f + '.jpg'
         }
 
     } else if (info.cel == 0) {
-
-        chrome.runtime.sendMessage('Dagobah')
+        info['planet'] = "Dagobah"
+        info['iconpath'] = 'img/planet/planetIcons/dagobah.png'
+        chrome.runtime.sendMessage({greeting: 'Dagobah', data: info})
         document.getElementById('planet').innerText = 'Dagobah'
         file = 'img/planet/dagobah/1.jpg'
 
-    } else if ( info.cel > 19 ) {
-        info['planet'] = 'Bespin'
-        chrome.runtime.sendMessage(info)
+    } else if (info.cel > 19) {
+        info['planet'] = "Bespin"
+        info['iconpath'] = 'img/planet/planetIcons/bespin.png'
+        chrome.runtime.sendMessage({greeting: "bespin", data: info})
         document.getElementById('planet').innerText = 'Bespin'
         f = Math.floor(Math.random() * 5) + 1
         file = 'img/planet/bespin/' + f + '.jpg'
 
-    } else if ( info.cel > 17 ) {
-
+    } else if (info.cel > 17) {
+        info['planet'] = "Naboo"
+        info['iconpath'] = 'img/planet/planetIcons/naboo.png'
         if (info.currentTime < info.sunset && info.currentTime > info.sunrise) {
-            chrome.runtime.sendMessage('Nabooo')
-            document.getElementById('planet').innerText = 'Nabooo'
+            chrome.runtime.sendMessage({greeting: "naboo", data: info})
+            document.getElementById('planet').innerText = 'Naboo'
             f = Math.floor(Math.random() * 2) + 1
             file = 'img/planet/naboo/day/' + f + '.jpg'
         } else {
-            chrome.runtime.sendMessage('Nabooo')
-            document.getElementById('planet').innerText = 'Nabooo'
+            chrome.runtime.sendMessage({greeting: "Naboo", data: info})
+            document.getElementById('planet').innerText = 'Naboo'
             file = 'img/planet/naboo/night/1.jpg'
         }
 
-    } else if ( info.cel > 10 ) {
+    } else if (info.cel > 10) {
 
         if (info.currentTime < info.sunset && info.currentTime > info.sunrise) {
             chrome.runtime.sendMessage('Coruscant')
@@ -102,7 +111,7 @@ function getImgUrl(info) {
             f = Math.floor(Math.random() * 5) + 1
             file = 'img/planet/coruscant/night/' + f + '.jpg'
         }
-    } else if ( info.cel > 0 ) {
+    } else if (info.cel > 0) {
 
         if (info.currentTime < info.sunset && info.currentTime > info.sunrise) {
             chrome.runtime.sendMessage('Endor')
