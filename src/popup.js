@@ -52,7 +52,7 @@ function getData(data) {
     } else if (celsius > 16) {
         document.getElementById('planet').innerText = "Naboo"
         document.getElementById('planetimg').src = 'img/planet/icons/naboo.png'
-    } else if (celsius > 10) {
+    } else if (celsius > 9) {
         document.getElementById('planet').innerText = "Coruscant"
         document.getElementById('planetimg').src = 'img/planet/icons/coruscant.png'
     } else if (celsius > 3) {
