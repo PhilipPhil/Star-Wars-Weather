@@ -21,12 +21,5 @@
   ],
   "chrome_url_overrides": {
     "newtab": "newTab.html"
-  },
-  "background": {
-    "persistent": false,
-    "scripts": [
-      "src/background.js",
-      "src/updateWeather.js"
-    ]
   }
 }
