@@ -47,7 +47,7 @@ function getImgUrl(info) {
         document.getElementById('planet').innerText = 'Bespin'
         f = Math.floor(Math.random() * 9) + 1
         file = 'img/planet/bespin/' + f + '.jpg'
-    } else if (info.cel > 16) {
+    } else if (info.cel > 15) {
         document.getElementById('planet').innerText = 'Naboo'
         if (info.currentTime < info.sunset && info.currentTime > info.sunrise) {
             f = Math.floor(Math.random() * 3) + 1
