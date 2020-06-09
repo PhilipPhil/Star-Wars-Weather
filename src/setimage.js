@@ -68,7 +68,7 @@ function getImgUrl(info) {
     } else if (info.cel > 3) {
         document.getElementById('planet').innerText = 'Endor'
         if (info.currentTime < info.sunset && info.currentTime > info.sunrise) {
-            f = Math.floor(Math.random() * 7) + 1
+            f = Math.floor(Math.random() * 6) + 1
             file = 'img/planet/endor/day/' + f + '.jpg'
         } else {
             f = Math.floor(Math.random() * 5) + 1
