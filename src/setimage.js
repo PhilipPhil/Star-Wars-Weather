@@ -50,10 +50,10 @@ function getImgUrl(info) {
     } else if (info.cel > 16) {
         document.getElementById('planet').innerText = 'Naboo'
         if (info.currentTime < info.sunset && info.currentTime > info.sunrise) {
-            f = Math.floor(Math.random() * 3) + 1
+            f = Math.floor(Math.random() * 4) + 1
             file = 'img/planet/naboo/day/' + f + '.jpg'
         } else {
-            f = Math.floor(Math.random() * 2) + 1
+            f = Math.floor(Math.random() * 3) + 1
             file = 'img/planet/naboo/night/' + f + '.jpg'
         }
     } else if (info.cel > 9) {
