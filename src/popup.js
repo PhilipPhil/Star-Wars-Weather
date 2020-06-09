@@ -49,7 +49,7 @@ function getData(data) {
     } else if (celsius > 19) {
         document.getElementById('planet').innerText = "Bespin"
         document.getElementById('planetimg').src = 'img/planet/icons/bespin.png'
-    } else if (celsius > 15) {
+    } else if (celsius > 16) {
         document.getElementById('planet').innerText = "Naboo"
         document.getElementById('planetimg').src = 'img/planet/icons/naboo.png'
     } else if (celsius > 9) {
