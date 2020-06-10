@@ -29,6 +29,9 @@ Api’s:
 ### Night time with mild climate
 ![Image1](img/AppExample/sample1.JPG)
 
+### Day time with warm climate
+![Image8](img/AppExample/sample8.JPG)
+
 ### More Examples
 ![Image2](img/AppExample/sample2.JPG)
 
@@ -41,5 +44,3 @@ Api’s:
 ![Image6](img/AppExample/sample6.JPG)
 
 ![Image7](img/AppExample/sample7.JPG)
-
-![Image8](img/AppExample/sample8.JPG)
