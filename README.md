@@ -1,16 +1,16 @@
 # Star Wars Weather Chrome Extension
-This is a new tab chrome extension that displays a beautiful Star Wars planet theme that matches your current location's weather, and time of day.
+Fully responsive new tab chrome extension that displays a beautiful Star Wars planet based on the weather in your current location, and time of day.
 
 Features:
 - Background generator based on weather and time of day in your current location.
 - Links to your most visited websites.
-- Shortcuts to Gmail, Google Images, and the Apps store.
+- Shortcuts for Gmail, Google Images, and the Apps store.
 - Link that takes you to the default new tab page.
 - Google search bar.
-- Fully functional on any screen size. 
+- Fully responsive design. 
 - Popup features that displayes current city, temperature, weather, and Star Wars planet image.
-- Weather updates on click on new tab or popup icon.
-- Ten worlds currently included, with many backgrounds for each world and time of day.
+- Weather updates of current location with popup.
+- Nine different planets, with many backgrounds for each planet and time of day.
 
 Install:
 - npm install bootstrap
@@ -39,3 +39,7 @@ Api’s:
 ![Image5](img/AppExample/sample5.JPG)
 
 ![Image6](img/AppExample/sample6.JPG)
+
+![Image7](img/AppExample/sample7.JPG)
+
+![Image8](img/AppExample/sample8.JPG)
