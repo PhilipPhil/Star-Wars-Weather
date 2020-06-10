@@ -21,8 +21,10 @@ Install:
 - npm install psl
 
 Api’s:
-- Weather: openweathermap.org
-- Logo: clearbit.com
+- Weather: openweathermap API
+- Logos: clearbit Logo API
+- TopSites: chrome.topSites Api
+- GeoLocation: Geolocation API
 
 ## Sample Images
 
