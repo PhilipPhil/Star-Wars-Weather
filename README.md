@@ -1,7 +1,7 @@
 # Star Wars Weather Chrome Extension
 Fully responsive new tab chrome extension that displays a beautiful Star Wars planet based on the weather in your current location, and time of day.
 
-This app was trasformed into a NASA astronomy image of the day chrome extension. [Can be seen here](https://github.com/PhilipPhil/NASA-Weather-Chrome-Extension/blob/master/README.md).
+I later trasformed this project into a NASA astronomy image of the day chrome extension. [Can be seen here](https://github.com/PhilipPhil/NASA-Weather-Chrome-Extension/blob/master/README.md).
 
 Features:
 - Background generator based on weather and time of day in your current location.
