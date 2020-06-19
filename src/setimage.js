@@ -28,7 +28,7 @@ function getImgUrl(info) {
     } else if (info.cel > 31) {
         document.getElementById('planet').innerText = 'Jakku'
         if (info.currentTime < info.sunset && info.currentTime > info.sunrise) {
-            f = Math.floor(Math.random() * 9) + 1
+            f = Math.floor(Math.random() * 8) + 1
             file = 'img/planet/jakku/day/' + f + '.jpg'
         } else {
             f = Math.floor(Math.random() * 2) + 1
